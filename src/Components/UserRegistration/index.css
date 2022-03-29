@@ -1,0 +1,94 @@
+.body1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+    padding: 25px;
+    background-image: linear-gradient(to right, rgb(238, 200, 131), white, rgb(187, 243, 187));
+
+  }
+  
+  .heading1 {
+    color: #9411ff;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 30px;
+    text-align: center;
+  }
+  
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 75px;
+    /* max-width: 600px; */
+    margin-top: 20px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9sDUoRt_xVako0UlVL6lKhFt0bq5sIaoZhg&usqp=CAU');
+    background-size: cover;
+  }
+  
+  .form-group {
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .input-label-1 {
+    margin-bottom: 5px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 16px;
+    color: #095dfa;
+  }
+  /* .textarea {
+      width: 350px;
+      height: 60px;
+      
+  }
+   */
+  /* .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-group > label {
+     display: block;
+     font-weight: 700;
+  }
+  
+  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+    box-shadow: none;
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 250%;
+  } */
+
+  /* .container1 {
+      display: flex;
+      flex-direction: column;
+  } */
+
+  .button {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    background-color: #ce0c0c;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+

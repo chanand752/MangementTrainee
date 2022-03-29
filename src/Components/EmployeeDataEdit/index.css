@@ -1,0 +1,108 @@
+.body-put {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    background-image: linear-gradient(to right, rgb(238, 200, 131), white, rgb(187, 243, 187));
+
+  }
+  
+  .heading-put {
+    color: #9411ff;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 30px;
+    text-align: center;
+  }
+  
+.put-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200%;
+    max-width: 390px;
+    /* margin-top: 30px; */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0W9mpmyUh550ONNzM19c3EyG4FHprELttwA&usqp=CAU');
+    background-color: antiquewhite;
+    background-size: cover;
+  }
+  
+  .form-group-put {
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .input-label-1-put {
+    margin-bottom: 2px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 16px;
+    color: #fa0202;
+  }
+
+.input-field-put {
+  font-size: 14px;
+  height: 40px;
+  border: 1px solid #d7dfe9;
+  /* background-color: #e2e8f0; */
+  color: #64748b;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+  /* width: 75%; */
+  outline: none;
+}
+
+  .textarea-put {
+      width: 350px;
+      height: 60px;
+      
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-group > label {
+     display: block;
+     font-weight: 700;
+  }
+  
+  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+    box-shadow: none;
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* .container1 {
+      display: flex;
+      flex-direction: column;
+  } */
+
+  .button-put {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    height: 40px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    background-color: #ce0c0c;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+

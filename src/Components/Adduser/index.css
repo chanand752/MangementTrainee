@@ -1,0 +1,30 @@
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading-3 {
+    color: #0667fa;
+    font-family: 'Roboto';
+    font-size: 25px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.form-continer-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* align-items: center; */
+}
+
+.input-label-2 {
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #e24141;
+}
+
+

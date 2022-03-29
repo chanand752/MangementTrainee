@@ -1,0 +1,119 @@
+.body-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    background-image: linear-gradient(to right, rgb(238, 200, 131), white, rgb(187, 243, 187));
+
+  }
+  
+  .heading-new {
+    color: #9411ff;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 30px;
+    text-align: center;
+  }
+  
+.container-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200%;
+    max-width: 390px;
+    /* margin-top: 5px; */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9sDUoRt_xVako0UlVL6lKhFt0bq5sIaoZhg&usqp=CAU');
+    /* background-color: rgb(249, 250, 215); */
+    background-size: cover;
+  }
+  
+  .form-group-new {
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .input-label-1-new {
+    margin-bottom: 3px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 16px;
+    color: #dd2929;
+  }
+  
+  .input-field-new {
+    font-size: 14px;
+    height: 40px;
+    border: 1px solid #d7dfe9;
+    /* background-color: #e2e8f0; */
+    color: #64748b;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 8px 16px 8px 16px;
+    /* width: 75%; */
+    outline: none;
+  }
+  
+  
+  .textarea-new {
+      width: 350px;
+      height: 60px;
+      
+  }
+  
+  .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-group > label {
+     display: block;
+     font-weight: 700;
+  }
+  
+  .form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+    box-shadow: none;
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* .container1 {
+      display: flex;
+      flex-direction: column;
+  } */
+
+  .button-new {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    height: 40px;
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: #ce0c0c;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+
+  .button1 {
+    background-color: rgb(228, 18, 18); 
+    color: rgb(247, 245, 245); 
+    /* border: 2px solid #4CAF50; */
+  }
+
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
