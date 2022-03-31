@@ -11,6 +11,7 @@ import EmployeeDataEdit from './Components/EmployeeDataEdit';
 import TicketStatusApproved from './Components/TicketStatusApproved';
 import SignUpForm from './Components/SignUpPage';
 import MessageBox from './Components/MessageBox';
+import NewTableData from './Components/NewTable';
 import NotFound from './Components/NotFound';
 import ProtectedRoute from './Components/ProtectedRoute'
 import AddNewEmployee from './Components/AddNewEmployee';
@@ -32,7 +33,8 @@ class App extends  Component {
         <Route exact path ="/addnewemployee" component={AddNewEmployee} />
         <Route exact path ="/addnewresource" component={AddNewResource} />
         <Route exact path ="/TicketStatus" component={TicketStatusApproved} />
-        <ProtectedRoute exact path ="/employeeSearch" component={EmployeeData} />
+        {/* <ProtectedRoute exact path ="/employeeSearch" component={EmployeeData} /> */}
+        <ProtectedRoute exact path="/employeeSearch" component={NewTableData}/>
         <ProtectedRoute exact path ="/trainingStatus" component={TrainingStatus} />
         <Route path="/not-found" component={NotFound} />
         <Redirect to="not-found" />

@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 export default class EmployeeData extends Component {
     constructor(props) {
         super(props);
-        this.state = { searchInput: '', blogsData2: [], MasterChecked: false, SelectedList: [] };
+        this.state = { searchInput: '', blogsData2: [], MasterChecked: false, SelectedList: [], roleData: [] };
 
     }
 
@@ -67,15 +67,14 @@ export default class EmployeeData extends Component {
 
     componentDidMount() {
         this.getData()
+        this.getRoleBasedData()
     }
 
     getData = async () => {
         const response = await fetch('http://172.17.12.112:3333/data/get')
-        console.log(response)
-        const statusCode = await response.statusCode
-        console.log(statusCode)
+        //console.log(response)
         const data = await response.json()
-        console.log(data)
+        //console.log(data)
         const formattedData1 = data.map(eachItem => ({
             id: eachItem.id,
             Ename: eachItem.Ename,
@@ -89,17 +88,68 @@ export default class EmployeeData extends Component {
         this.setState({ blogsData2: formattedData1, })
         // console.log(formattedData)
     }
+    
+   getRoleBasedData = async () => {
+    const response = await fetch('http://172.17.12.99:5000/rou/managers')
+    //console.log(response)
+    const data1 = await response.json()
+    console.log(data1)
+   const  mangersData = data1.map(eacItem1 => ({
+        role: eacItem1.role,
+    }))
+      
+   this.setState({roleData :mangersData })
+   
+   }
+  
+ 
+
     render() {
-        const { searchInput, blogsData2 } = this.state
-        const searchResults = blogsData2.filter((eachUser) =>
-            eachUser.Ename.toLowerCase().includes(searchInput.toLowerCase()))
+        const { searchInput, blogsData2,roleData} = this.state
+         const searchResults = blogsData2.filter((eachUser) =>
+        eachUser.Ename.toLowerCase().includes(searchInput.toLowerCase()))
+      
+       
+ 
+        let message
+
+        if(roleData !== "HR") {
+            // message = <Link to="/addnewresource"><button className='button-ticket'>Rise Ticket to New Resoruce {AddNewResource}</button></Link>
+            
+            message =<Link to="/addnewresource"><button className='button-ticket'>Rise Ticket to New Resoruce {AddNewResource}</button></Link>
+        }
+
+        else
+         {
+            message ="Hai"
+        }
+
+         //{role === "Manager" && <Link to="/addnewresource"> <button className='button-ticket'>Rise Ticket to New Resoruce {AddNewResource}</button></Link>}
+        
+        //console.log(role,"HAi")
+        // var Handlechange = e => {
+        //     this.setState({role: this.state.role})
+        // }
+      const role =JSON.stringify(roleData) ;
+    //  console.log(object.values roleData)
+    //  console.log(role === 'HR' ? 'Manager':'Hai')
+
+  
+         //{this.state.role === "Manager" && <Link to="/addnewresource"> <button className='button-ticket'>Rise Ticket to New Resoruce {AddNewResource}</button></Link>}
+          
+        //  this.state.role  && <div>Hai</div>
 
         // eachUser === searchInput )
 
         return (
             <>
                 <Header />
-                <Link to="/addnewresource"> <button className='button-ticket'>Rise Ticket to New Resoruce {AddNewResource}</button></Link>
+               <div>  
+            {message}
+                   
+               {/* <button onClick={Handlechange}>{role ?'Hide':'Show'}</button> */}
+                {/* {role && <Link to="/addnewresource"> <button className='button-ticket'>  Rise Ticket to New Resoruce {AddNewResource}</button></Link>} */}
+            </div>
                 <div className='search-container-1'>
                     <label className="input-label-3" htmlFor="employee">
                         Employee Search :

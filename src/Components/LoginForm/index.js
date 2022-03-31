@@ -27,18 +27,23 @@ class LoginForm extends Component {
 
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
-
+  // sessionStorage.setItem('jwt_token', jwtToken, {
+  //   expires:"",
+  //   path: '/'
+  // })
     Cookies.set('jwt_token', jwtToken, {
       expires: 1,
       path: '/',
     })
     history.replace('/')
+   
   }
 
   onSubmitFailure = msg => {
     console.log(msg)
     this.setState({showSubmitError: true, msg})
   }
+ 
 
   submitForm = async event => {
     event.preventDefault()
@@ -56,9 +61,9 @@ class LoginForm extends Component {
     const data = await response.json()
     console.log(data)
     if (response.ok === true) {
-      this.onSubmitSuccess(data.jwt_token)
+      this.onSubmitSuccess(data.token)
       window.alert("Login Suceess")
-      console.log(data.jwt_token)
+      console.log(data.token)
     } else {
       this.onSubmitFailure(data.msg)
     }
@@ -107,6 +112,7 @@ class LoginForm extends Component {
   render() {
     const {showSubmitError, msg} = this.state
     const jwtToken = Cookies.get('jwt_token')
+     //const jwtToken = sessionStorage.getItem('jwt_token')
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }
