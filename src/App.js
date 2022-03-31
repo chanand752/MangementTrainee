@@ -39,7 +39,7 @@ class App extends  Component {
         <Route path="/not-found" component={NotFound} />
         <Redirect to="not-found" />
       </Switch>
-    </div>
+    </div> 
   )
 }
 }
