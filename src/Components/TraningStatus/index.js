@@ -22,6 +22,7 @@ export default class TrainingStatus extends Component {
     //     )
 
     // }
+    
     constructor(props) {
         super(props);
       
