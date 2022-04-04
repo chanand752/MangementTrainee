@@ -1,0 +1,53 @@
+.Grid-Button{
+    margin-top: 40px;
+}
+.header{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+.Price-Grid-component-body{
+  display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+
+/* Price List Css */
+.Price-component-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 20px;
+    /* align-items: center; */
+}
+
+
+
+  .button1:hover {
+    background-color: #0275d8;
+    /* color: white; */
+  }
+
+  .input {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 50px;
+    /* justify-content: space-between; */
+  }
+
+
+  .form-width {
+      margin-bottom: 10px;
+  }
+
+  .form-width-1 {
+    /* margin-bottom: 10px; */
+    margin-left: 5px;
+}
+.pricelist-Button{
+    margin-left: 10px;
+    width: 50%;
+}

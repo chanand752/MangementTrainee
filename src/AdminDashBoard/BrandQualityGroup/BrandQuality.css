@@ -1,0 +1,71 @@
+
+.title{
+    font-size: 20px;
+   
+  }
+  .quality-group-button{
+    border-radius: 10px;
+    margin-top: 25px;
+    height: 25px;
+    color: white;
+    font-weight:300;
+    background-color: rgb(93, 180, 93);
+    width: 210px;
+    border: none;
+  }
+  .second-row{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .icon{
+    margin-top: 20px;
+  }
+  .button{
+    display: flex;
+    margin-left: 1150px;
+  }
+  .table-cont{
+    margin-top: 20px;
+  }
+  
+  .Button-delete{
+    border-radius: 20px;
+  }
+  .t-head{
+    background-color: aqua;
+  }
+  .body-down{
+    margin-left: 10px;
+    /* width: 99vw; */
+    margin-top: 10px;
+  }
+ 
+  .add-button{
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+  .nav {
+    height: 70px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 5px 36px;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    background-color: #f3f3f3;
+  }
+  .nav-content{
+    gap: 20px;
+  }
+  .table-code{
+    color: aqua;
+  }
+  .css-1wvnaxz-MuiTableCell-root.MuiTableCell-head {
+    background-color: #0d6efd;
+    color: #fff;
+}
+.nav-image{
+  margin-left: 10px;
+    height: 70px;
+}
