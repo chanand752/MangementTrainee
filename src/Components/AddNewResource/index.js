@@ -51,7 +51,7 @@ submitForm = async event => {
     const {id,name,no_of_requirement,skillset} = this.state
     const userDetails_2 = {id,name,no_of_requirement,skillset}
     console.log(userDetails_2)
-    const url = 'http://172.17.12.99:5000/rou/ticket'
+    const url = 'http://172.17.12.99:5050/rou/ticket'
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -62,12 +62,6 @@ submitForm = async event => {
     const data = await response.json()
     this.setState(data)
      console.log(data)
-
-    // if (response.ok === true) {
-    //   this.onSubmitSuccess(data.jwt_token)
-    // } else {
-    //   this.onSubmitFailure(data.error_msg)
-    // }
     window.alert("New Employye Details Created Sucessfully")
   }
 
@@ -94,11 +88,11 @@ return(
   <h3 className='heading-post'>Rise Ticket For New Resource</h3>
   <form onSubmit={this.submitForm} className="container-new">
   <div className='form-group-new'>
-      <label className='input-label-1-new'>Enter Your Employee Id </label>
+      <label className='input-label-1-new'>Enter Your Employee Id: </label>
       <input type="text" value= {id} onChange={this.onChangeId} className="input-field-new"  />
     </div>
   <div className='form-group-new'>
-      <label className='input-label-1-new'>Enter Your Name </label>
+      <label className='input-label-1-new'>Enter Your Name: </label>
       <input type="text" value= {name} onChange={this.onChangeName} className="input-field-new"  />
     </div>
     <div className='form-group-new'>

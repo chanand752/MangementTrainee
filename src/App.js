@@ -6,7 +6,7 @@ import Home from './Components/Home';
 import LoginForm from './Components/LoginForm';
 import UserRegistration from './Components/UserRegistration';
 import EmployeeData from './Components/EmployeeData';
-import TrainingStatus from './Components/TraningStatus';
+import TrainingStatusComp from './Components/TraningStatus';
 import EmployeeDataEdit from './Components/EmployeeDataEdit';
 import TicketStatusApproved from './Components/TicketStatusApproved';
 import SignUpForm from './Components/SignUpPage';
@@ -35,7 +35,7 @@ class App extends  Component {
         <Route exact path ="/TicketStatus" component={TicketStatusApproved} />
         {/* <ProtectedRoute exact path ="/employeeSearch" component={EmployeeData} /> */}
         <ProtectedRoute exact path="/employeeSearch" component={NewTableData}/>
-        <ProtectedRoute exact path ="/trainingStatus" component={TrainingStatus} />
+        <ProtectedRoute exact path ="/trainingStatus" component={TrainingStatusComp} />
         <Route path="/not-found" component={NotFound} />
         <Redirect to="not-found" />
       </Switch>

@@ -51,7 +51,7 @@ submitForm = async event => {
     const {id,name,no_of_requirement,skillset,experiance,role, ticketstatus,purpose} = this.state
     const EmployeeDetails = {id,name,no_of_requirement,skillset,experiance,role,ticketstatus,purpose}
     console.log(EmployeeDetails)
-    const url = 'http://172.17.12.99:5000/rou/ticket'
+    const url = 'http://172.17.12.99:5050/rou/ticket'
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},

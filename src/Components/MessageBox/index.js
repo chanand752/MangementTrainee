@@ -17,7 +17,7 @@ export default class MessageBox  extends Component {
     }
 
     getEmployeesData = async () => {
-        const response = await fetch('http://172.17.12.99:5000/rou/ticket')
+        const response = await fetch('http://172.17.12.141:3500/dataM/getapiM')
         console.log(response)
         const statusCode = await response.statusCode
         console.log(statusCode)
@@ -25,10 +25,10 @@ export default class MessageBox  extends Component {
         console.log(data)
         const formattedEmployeeData = data.map(eachItem => ({
             SL_No: eachItem.SL_No,
-            id: eachItem.id,
+            Employee_ID: eachItem.Employee_ID,
             name: eachItem.name,
             role: eachItem.role,                                                                
-            no_of_requirement: eachItem.no_of_requirement,
+            noOfRequirement: eachItem.noOfRequirement,
             skillset: eachItem.skillset,
             experiance: eachItem.experiance,
             purpose: eachItem.purpose,
@@ -84,10 +84,10 @@ export default class MessageBox  extends Component {
                         {searchResults.map((employee) => (
                             <tr>
                                 <td>{employee.SL_No}</td>
-                                <td>{employee.id}</td>
+                                <td>{employee.Employee_ID}</td>
                                 <td>{employee.name}</td>
                                 <td>{employee.role}</td>
-                                <td>{employee.no_of_requirement}</td>
+                                <td>{employee.noOfRequirement}</td>
                                 <td>{employee.skillset}</td>
                                 <td>{employee.experiance}</td>
                                 <td>{employee.purpose}</td>

@@ -10,18 +10,18 @@ import './index.css'
 
 class LoginForm extends Component {
   state = {
-    email: '',
-    password: '',
+    Email: '',
+    Password: '',
     showSubmitError: false,
     msg: '',
   }
 
   onChangeUsername = event => {
-    this.setState({email: event.target.value})
+    this.setState({Email: event.target.value})
   }
 
   onChangePassword = event => {
-    this.setState({password: event.target.value})
+    this.setState({Password: event.target.value})
   }
 
 
@@ -47,10 +47,10 @@ class LoginForm extends Component {
 
   submitForm = async event => {
     event.preventDefault()
-    const {email, password} = this.state
-    const userDetails = {email, password}
+    const {Email, Password} = this.state
+    const userDetails = {Email, Password}
     console.log(userDetails)
-    const url = 'http://172.17.12.99:5000/rou/login'
+    const url = 'http://172.17.12.141:3500/jwtpostapi/login'
     const options = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -67,10 +67,11 @@ class LoginForm extends Component {
     } else {
       this.onSubmitFailure(data.msg)
     }
+    
   }
 
   renderPasswordField = () => {
-    const {password} = this.state
+    const {Password} = this.state
     return (
       <>
         <label className="input-label" htmlFor="password">
@@ -78,9 +79,9 @@ class LoginForm extends Component {
         </label>
         <input
           type="password"
-          id="password"
+          id="Password"
           className="password-input-field"
-          value={password}
+          value={Password}
           onChange={this.onChangePassword}
           placeholder="Password"
         />
@@ -89,7 +90,7 @@ class LoginForm extends Component {
   }
 
   renderUsernameField = () => {
-    const {email} = this.state
+    const {Email} = this.state
     return (
       <>
         <label className="input-label" htmlFor="email">
@@ -97,9 +98,9 @@ class LoginForm extends Component {
         </label>
         <input
           type="text"
-          id="email"
+          id="Email"
           className="username-input-field-2"
-          value={email}
+          value={Email}
           onChange={this.onChangeUsername}
           placeholder="Enter Your Email"
         />

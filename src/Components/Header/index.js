@@ -1,5 +1,6 @@
 import {Link, withRouter} from 'react-router-dom'
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
+import { Button } from 'antd';
 import './index.css'
 
 const Header = props => {
@@ -69,13 +70,13 @@ const Header = props => {
               </Link>
             </li> */}
           </ul>
-          <button
-            type="button"
-            className="logout-desktop-btn"
+          <Button
+            type="primary"
+            // className="logout-desktop-btn"
             onClick={onClickLogout}
           >
             Logout
-          </button>
+          </Button>
         </div>
       </div>
       <div className="nav-menu-mobile">

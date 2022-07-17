@@ -110,7 +110,7 @@ class SignUpForm extends Component {
     }
 
     handleSubmit = async (e) => {
-        this.props.history.replace('/login');
+        // this.props.history.replace('/login');
         e.preventDefault();
         if (this.handleFormValidation()) {
             // alert('You have been successfully registered.')
@@ -121,7 +121,7 @@ class SignUpForm extends Component {
         const newuserDetails = { username, email,password, role,conform_password,gender,mobile_number}
         console.log(newuserDetails)
         console.log(newuserDetails)
-        const url = 'http://172.17.12.99:5000/rou/sign-in'
+        const url = 'http://172.17.12.99:5050/rou/sign-in'
         const options = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

@@ -2,7 +2,7 @@
     color: rgb(184, 10, 190);
     font-family: 'Roboto';
     font-size: 25px;
-    margin: 30px;
+    /* margin: 30px; */
     font-weight: bold;
     text-align: center;
 }
@@ -87,4 +87,12 @@ table {
   
   tr:nth-child(even) {
     background-color: #dddddd;
+  }
+
+
+
+  .editable-row .ant-form-item-explain {
+    position: absolute;
+    top: 100%;
+    font-size: 12px;
   }
